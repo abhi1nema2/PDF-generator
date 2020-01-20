@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student's profile</title>
+    <head>
+        <link rel="stylesheet" type="text/css"
+            href="https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic">
+        <style type="text/css">
+            body {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0px;
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Calibri', Arial, sans-serif;
+            }
+
+            .document-property-page .logo {
+                transform: rotate(-90deg);
+                left: -80px;
+                position: absolute;
+                top: 120px;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            .document-property-page .documnet-wrapper {
+                text-transform: capitalize;
+                padding: 0 80px 60px;
+            }
+
+            .document-property-page .document-section {
+                display: flex;
+                flex-direction: row;
+                color: #ff6b61;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .document-property-page .document-section p {
+                margin: 0 40px 0 0;
+                padding: 0;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .document-property-page .document-section hr {
+                flex: 3 1;
+                height: 1px;
+                width: 100%;
+                background: #e96d66;
+                border: 2px solid #e96d66;
+            }
+
+            .document-property-page p {
+                margin: 0;
+            }
+
+            .document-property-page .header {
+                font-size: 26px;
+                font-weight: 600;
+            }
+
+            .document-property-page .subheader-section {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                text-transform: uppercase;
+            }
+
+            .document-property-page .subheader-section .type {
+                color: #e96d66;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+
+            .document-property-page .header-divider {
+                height: 1px;
+                background: #000;
+                margin-bottom: 20px;
+                border: 2px solid black;
+            }
+
+            .document-property-page .pair-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 33%;
+                padding: 10px 0;
+            }
+
+            .document-property-page .pair-block .pair-value {
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+
+            .document-property-page .pair-block-container {
+                text-transform: capitalize;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0;
+            }
+
+            .document-property-page .gallery-section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .document-property-page .gallery-section .gallery-image {
+                flex: 1 0 50%;
+                margin: 20px 0;
+            }
+
+            .document-property-page .gallery-section .gallery-image img {
+                height: 200px;
+                width: 300px;
+                z-index: 100000;
+                display: block;
+            }
+
+            .sub-header {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .sub-header .heading {
+                font-weight: 400;
+            }
+
+            .address-section {
+                display: flex;
+                width: 66.6666%;
+                justify-content: space-between;
+            }
+
+            .pair-value-name,
+            .sub-header .value {
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            .pair-type,
+            .pair-value,
+            .heading {
+                font-size: 12px;
+            }
+
+            .pair-block-address {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px 10px;
+            }
+
+            table {
+                width: 100%;
+                margin-top: 20px;
+                border-spacing: 0px;
+            }
+
+            th {
+                text-align: start;
+                padding: 25px 0;
+                color: #4b6984;
+            }
+
+            th:last-child {
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            td {
+                font-size: 12px;
+                font-weight: 600;
+                padding: 15px 0;
+            }
+
+            tr td:last-child {
+              text-align: right;
+              padding-right: 10px;
+            }
+
+            tr td:first-child {
+              width: 35%;
+            }
+
+            .total-section td {
+                margin: 10px 0;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+            }
+
+            .final-table .amount {
+                font-size: 18px;
+            }
+
+            .final-table .head {
+                text-align: left;
+                padding-left: 5px;
+            }
+
+            .pair-value-end {
+                font-size: 18px;
+            }
+
+            .amount-label {
+                color: #e96d66;
+            }
+
+            .amount-in-words {
+                font-weight: 400;
+                width: 20%;
+            }
+        </style>
+        <meta charset="utf-8">
+    </head>
+
+<body>
+    <div class="document-property-page">
+        <img class="logo" src='./ownerTownLogo.png' alt="logo" />
+        <div class="documnet-wrapper">
+            <p class="header">Invoice</p>
+            <div class="subheader-section">
+                <p class="subheader">Invoice No. 100452</p>
+                <p class="type">INCOME</p>
+            </div>
+            <hr class="header-divider" />
+            <div class="address-section">
+                <div class="pair-block-address">
+                    <p class="pair-type">INVOICED TO</p>
+                    <p class="pair-value-name">Rakesh Awasthi</p>
+                    <p class="pair-value">Bunglow 001, 16th Cross Rd, 22nd A Main, Vanganahalli, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</p>
+                </div>
+                <div class="pair-block-address">
+                    <p class="pair-type">BILLING TO</p>
+                    <p class="pair-value-name">Rajesh Sharma</p>
+                    <p class="pair-value">Bunglow 001, 16th Cross Rd, 22nd A Main, Vanganahalli, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102</p>
+                </div>
+            </div>
+            <div class="sub-header">
+                <div>
+                    <div class="heading">
+                        INVOICE NO.
+                    </div>
+                    <div class="value">
+                        100452
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        TERMS
+                    </div>
+                    <div class="value">
+                        Due on Reciept
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        DUE DATE
+                    </div>
+                    <div class="value">
+                        04 Sept 2019
+                    </div>
+                </div>
+            </div>
+
+            <div class="document-section">
+                <p> TRANSACTION DETAILS </p>
+                <hr />
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Decription</th>
+                            <th>Qty</th>
+                            <th>Rate</th>
+                            <th>Tax</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 66080</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 0</td>
+                            <td class="total">₹ 56000</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 0</td>
+                            <td class="total">₹ 56000</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 66080</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 66080</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 66080</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem Ipsum Dolor Sit Imet</td>
+                            <td>1</td>
+                            <td class="rate">₹ 56000</td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 66080</td>
+                        </tr>
+                        <tr class="total-section">
+                            <td></td>
+                            <td>Sub-Total</td>
+                            <td class="rate"></td>
+                            <td class="tax">₹ 10080</td>
+                            <td class="total">₹ 442400</td>
+                        </tr>
+                        <tr class="final-table">
+                            <td></td>
+                            <td></td>
+                            <td class="head">Total</td>
+                            <td></td>
+                            <td class="amount">442400</td>
+                        </tr>
+                        <tr class="final-table">
+                            <td></td>
+                            <td></td>
+                            <td class="head amount-label">Amount Due</td>
+                            <td></td>
+                            <td class="amount">₹ 0</td>
+                        </tr>
+                        <tr class="final-table">
+                            <td></td>
+                            <td></td>
+                            <td class="head">Total (In words)</td>
+                            <td></td>
+                            <td class="amount amount-in-words">FOUR LAKH FOURTY-TWO THOUSAND FOUR HUNDRED RUPEE  ONLY</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="address-section">
+                    <div class="pair-block-address">
+                        <p class="pair-value-end">Terms & Conditions</p>
+                        <p class="pair-value">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud</p>
+                    </div>
+                    <div class="pair-block-address">
+                        <p class="pair-value-end">Additional Notes</p>
+                        <p class="pair-value">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
